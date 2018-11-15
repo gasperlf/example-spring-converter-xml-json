@@ -4,7 +4,7 @@ import reactor.core.publisher.Mono;
 
 public interface ConvertFormatService {
 
-    public Mono<String> convertJsonToXml(Mono<String> json);
+    public Mono<String> convertXmlToJson(String xml);
+    public Mono<String> convertJsonToXml(String json);
 
-    public Mono<String> convertXmlToJson(Mono<String> xml);
 }
