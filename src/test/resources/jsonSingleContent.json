@@ -1,0 +1,50 @@
+{
+  "elements": [
+    {
+      "type": "element",
+      "name": "note",
+      "elements": [
+        {
+          "type": "element",
+          "name": "to",
+          "elements": [
+            {
+              "type": "text",
+              "text": "Spring framework"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "from",
+          "elements": [
+            {
+              "type": "text",
+              "text": "Lewis"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "heading",
+          "elements": [
+            {
+              "type": "text",
+              "text": "Executing coneverter xml to json using JavaScript engine "
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "body",
+          "elements": [
+            {
+              "type": "text",
+              "text": "Don't forget me this weekend!"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -21,7 +21,7 @@ public class ConvertHandler {
 
     public Mono<ServerResponse> getConvertXmlToJson(ServerRequest serverRequest) {
         Mono<String> xmlRequest = serverRequest.bodyToMono(String.class);
-        Mono<String> responseJson = xmlRequest.flatMap(convertFormatService::convertXmlToJson);
+        Mono<String> responseJson = convertFormatService.convertXmlToJson(xmlRequest);
         return responseJson.flatMap(rta -> ok()
                 .contentType(APPLICATION_JSON_UTF8)
                 .body(fromObject(rta)))
@@ -30,7 +30,7 @@ public class ConvertHandler {
 
     public Mono<ServerResponse> getConvertJsonToXml(ServerRequest serverRequest) {
         Mono<String> requestJson = serverRequest.bodyToMono(String.class);
-        Mono<String> response = requestJson.flatMap(convertFormatService::convertJsonToXml);
+        Mono<String> response = convertFormatService.convertJsonToXml(requestJson);
         return response.flatMap(rta -> ok()
                 .contentType(APPLICATION_XML)
                 .body(fromObject(rta)))
